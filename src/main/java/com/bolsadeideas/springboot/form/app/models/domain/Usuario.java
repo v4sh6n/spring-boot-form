@@ -2,10 +2,13 @@ package com.bolsadeideas.springboot.form.app.models.domain;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public class Usuario {
-	//no se valida porque no va a estar en el formulario
+	
+	//regular expresion
+	@Pattern(regexp = "[0-9]{3}[.,][\\d]{3}[.,][\\d]{3}[-][A-Z]{1}")
 	private String identificador;
 	
 	
