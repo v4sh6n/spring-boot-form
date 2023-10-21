@@ -9,7 +9,7 @@
 <body>
 	<h3 th:text="${titulo}"></h3>
 	<form th:action="@{/form}" th:object="${usuario}" method="post">
-		
+
 		<div>
 			<label for="identificador">identificador</label>
 			<div>
@@ -57,9 +57,15 @@
 			</div>
 			<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></DIV>
 			<div>
-				<input type="submit" value="Enviar">
+				<label for="cuenta">cuenta</label>
+				<div>
+					<input type="number" id="cuenta" th:field="*{cuenta}">
+				</div>
+				<div th:if="${#fields.hasErrors('cuenta')}" th:errors="*{cuenta}"></DIV>
+				<div>
+					<input type="submit" value="Enviar">
+				</div>
 			</div>
-		</div>
 	</form>
 </body>
 
