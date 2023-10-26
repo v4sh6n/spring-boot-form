@@ -9,7 +9,7 @@ import com.bolsadeideas.springboot.form.app.models.domain.Pais;
 
 @Service
 public class PaisServiceImpl implements PaisService {
-	
+
 	private List<Pais> lista;
 	
 	public PaisServiceImpl() {
@@ -21,26 +21,23 @@ public class PaisServiceImpl implements PaisService {
 				new Pais(5, "PE", "Perú"), 
 				new Pais(6, "CO", "Colombia"),
 				new Pais(7, "VE", "Venezuela"));
-	
 	}
 
 	@Override
 	public List<Pais> listar() {
-		
 		return lista;
 	}
 
 	@Override
-	public Pais obternerPorId(Integer id) {
+	public Pais obtenerPorId(Integer id) {
 		Pais resultado = null;
 		for(Pais pais: this.lista) {
 			if(id == pais.getId()) {
-			 resultado = pais;
-			 break;
+				resultado = pais;
+				break;
 			}
 		}
 		return resultado;
 	}
+
 }
-
-

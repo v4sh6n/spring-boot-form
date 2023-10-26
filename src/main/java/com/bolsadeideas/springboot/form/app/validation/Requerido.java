@@ -9,15 +9,14 @@ import java.lang.annotation.Target;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
+
 @Constraint(validatedBy = RequeridoValidador.class)
 @Retention(RUNTIME)
 @Target({ FIELD, METHOD })
 public @interface Requerido {
-	
-	String message() default "El campo es Requerido - usando notaciones";
+	String message() default "el campo es requerido - usando anotaciones";
 
 	Class<?>[] groups() default { };
 
 	Class<? extends Payload>[] payload() default { };
-
 }

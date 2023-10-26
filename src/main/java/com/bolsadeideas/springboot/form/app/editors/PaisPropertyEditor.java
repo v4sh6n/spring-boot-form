@@ -8,28 +8,21 @@ import org.springframework.stereotype.Component;
 import com.bolsadeideas.springboot.form.app.services.PaisService;
 
 @Component
-public class PaisPropertyEditor extends PropertyEditorSupport{
-	
+public class PaisPropertyEditor extends PropertyEditorSupport {
+
 	@Autowired
 	private PaisService service;
-	
+
 	@Override
 	public void setAsText(String idString) throws IllegalArgumentException {
-		
-		//if(idString != null && idString.length() > 0) {
-			try {
-				
-				Integer id = Integer.parseInt(idString);
-				this.setValue(service.obternerPorId(id));
-				
-			} catch (NumberFormatException e) {
-				setValue(null);
-			}
-		//} else {
-			//setValue(null);
-		}
-		
-		}
-	//}
 
+		try {
+			Integer id = Integer.parseInt(idString);
+			this.setValue(service.obtenerPorId(id));
+		} catch (NumberFormatException e) {
+			setValue(null);
+		}
 
+	}
+
+}

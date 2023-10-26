@@ -3,10 +3,11 @@ package com.bolsadeideas.springboot.form.app.services;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.bolsadeideas.springboot.form.app.models.domain.Role;
-
+@Primary
 @Service
 public class RoleServiceImpl implements RoleService {
 
