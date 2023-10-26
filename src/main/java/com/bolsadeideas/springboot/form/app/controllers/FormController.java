@@ -1,6 +1,7 @@
 package com.bolsadeideas.springboot.form.app.controllers;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
@@ -69,6 +70,26 @@ public class FormController {
 		model.addAttribute("titulo", "Formulario usuarios");
 		model.addAttribute("usuario", usuario);
 		return "form";
+	}
+	
+	@ModelAttribute("listaRolesString")
+	public List<String> listaRolesString(){
+		List<String> roles = new ArrayList<>();
+		roles.add("ROLE_ADMIN");
+		roles.add("ROLE_USER");
+		roles.add("ROLE_MODERATOR");
+		return roles;
+		
+	}
+	
+	@ModelAttribute("listaRolesMap")
+	public Map<String, String> listaRolesMap() {
+		Map<String, String> roles = new HashMap<String, String>();
+		roles.put("ROLE_ADMIN", "Administrador");
+		roles.put("ROLE_USER", "Usuario");
+		roles.put("ROLE_MODERATOR", "Moderador");
+		
+		return roles;
 	}
 	
 	@ModelAttribute("listaPaises")

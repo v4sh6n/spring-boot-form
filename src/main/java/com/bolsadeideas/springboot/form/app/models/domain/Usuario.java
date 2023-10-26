@@ -1,6 +1,7 @@
 package com.bolsadeideas.springboot.form.app.models.domain;
 
 import java.util.Date;
+import java.util.List;
 
 //import org.springframework.format.annotation.DateTimeFormat;
 
@@ -56,7 +57,16 @@ public class Usuario {
 	@NotNull
 	private Pais pais;
 	
+	private List<String> roles;
 	
+	
+	
+	public List<String> getRoles() {
+		return roles;
+	}
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
+	}
 	public Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}
