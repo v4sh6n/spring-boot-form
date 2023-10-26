@@ -1,8 +1,10 @@
 package com.bolsadeideas.springboot.form.app.models.domain;
 
-//import javax.validation.constraints.NotEmpty;
+//import jakarta.validation.constraints.NotEmpty;
+//import jakarta.validation.constraints.NotNull;
 
 public class Pais {
+	
 
 	private Integer id;
 	//@NotEmpty
