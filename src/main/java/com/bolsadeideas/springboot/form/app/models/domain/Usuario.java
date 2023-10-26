@@ -57,14 +57,14 @@ public class Usuario {
 	@NotNull
 	private Pais pais;
 	
-	private List<String> roles;
+	private List<Role> roles;
 	
 	
 	
-	public List<String> getRoles() {
+	public List<Role> getRoles() {
 		return roles;
 	}
-	public void setRoles(List<String> roles) {
+	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
 	public Date getFechaNacimiento() {
